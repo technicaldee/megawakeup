@@ -8,7 +8,7 @@ export default function TeamPage() {
     {
       name: 'Dr. (Mrs.) Inemesit Bassey',
       role: 'Founder & CEO',
-      image: './images/ceo1.png',
+      image: '/images/ceo1.png',
       bio: 'Visionary Founder and Chief Executive Officer of Mega Wake Up International Outreach. As Zonal Coordinator for North Central Agro Allied, Dr. Bassey leads the organization\'s mission to provide emergency relief quickly, effectively, and without impartiality to communities affected by poverty. Her compassionate leadership and unwavering commitment to humanitarian service have transformed countless lives across Nigeria.',
     },
   ]
@@ -17,13 +17,13 @@ export default function TeamPage() {
     {
       name: 'Prof. Sunday Awofisayo',
       role: 'Program Director',
-      image: './images/sunday.png',
+      image: '/images/sunday.png',
       bio: 'Program Director--Prof. Sunday Awofisayo, PhD, MBA, MSc, BSc'
     },
     {
       name: 'Mr. Udeme Ekpo',
       role: 'Director Finance/Operations',
-      image: './images/udeme.png',
+      image: '/images/udeme.png',
       bio: 'Director Finance/Operations--Mr. Udeme Ekpo, ACA, ACIFC'
     },
     {
@@ -47,7 +47,7 @@ export default function TeamPage() {
       name: 'Chief Henry Obot',
       role: 'Head of Internal Audit',
       bio: 'Oversees internal audit functions to ensure transparency, accountability, and efficient use of organizational resources.',
-      image: './images/henry.png',
+      image: '/images/henry.png',
     },
     {
       name: 'Dr. Olayemi Joshua',

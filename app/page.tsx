@@ -204,6 +204,45 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Board of Trustees Preview */}
+        <section className="py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Board of Trustees</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Guiding our mission with wisdom and dedication
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
+              {[
+                { name: 'Dr. Inemesit Aniefiok Bassey', role: 'Trustee' },
+                { name: 'Mr. Mkpa Aniefiok Bassey', role: 'Trustee' },
+                { name: 'Ime Donald', role: 'Trustee' },
+                { name: 'Alice Agbo', role: 'Trustee' },
+              ].map((trustee) => (
+                <Card key={trustee.name}>
+                  <CardContent className="p-6 text-center">
+                    <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">
+                        {trustee.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                      </span>
+                    </div>
+                    <h3 className="font-semibold text-lg mb-1">{trustee.name}</h3>
+                    <p className="text-sm text-primary">{trustee.role}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="text-center">
+              <Button asChild variant="outline" size="lg">
+                <Link href="/team">
+                  See All Team Members <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
