@@ -2,77 +2,10 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
+import Link from 'next/link'
+import { leadership, teamMembers, boardOfTrustees, truncateText } from '@/lib/team-data'
 
 export default function TeamPage() {
-  const leadership = [
-    {
-      name: 'Dr. (Mrs.) Inemesit Bassey',
-      role: 'Founder & CEO',
-      image: '/images/ceo1.png',
-      bio: 'Visionary Founder and Chief Executive Officer of Mega Wake Up International Outreach. As Zonal Coordinator for North Central Agro Allied, Dr. Bassey leads the organization\'s mission to provide emergency relief quickly, effectively, and without impartiality to communities affected by poverty. Her compassionate leadership and unwavering commitment to humanitarian service have transformed countless lives across Nigeria.',
-    },
-  ]
-
-  const teamMembers = [
-    {
-      name: 'Prof. Sunday Awofisayo',
-      role: 'Program Director',
-      image: '/images/sunday.png',
-      bio: 'Program Director--Prof. Sunday Awofisayo, PhD, MBA, MSc, BSc'
-    },
-    {
-      name: 'Mr. Udeme Ekpo',
-      role: 'Director Finance/Operations',
-      image: '/images/udeme.png',
-      bio: 'Director Finance/Operations--Mr. Udeme Ekpo, ACA, ACIFC'
-    },
-    {
-      name: 'Dr. Edidiong Ibup',
-      role: 'Chief Health Officer',
-      bio: 'Leading health initiatives and medical programs for MEWI\'s community outreach efforts.',
-    },
-    {
-      name: 'Mrs. Rejoice Chinwe',
-      role: 'Head of Human Resources',
-      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ALKaCTekF21TW8dhHIrDqwevRPQobZ.png',
-      bio: 'Results-driven Business Administration graduate with over 17 years of experience in business management, leadership, data analysis, procurement, HR, and administrative excellence.',
-    },
-    {
-      name: 'Mr. David Adekunle',
-      role: 'Head of Compliance',
-      bio: 'Energetic self-starter with extensive experience in compliance and regulatory affairs. Ensures adherence to organizational policies and standards. Holds an honours degree focused on Communications.',
-      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QwTeFKYWzq9rBeFEOQ8maZm3MQ7eVr.png',
-    },
-    {
-      name: 'Chief Henry Obot',
-      role: 'Head of Internal Audit',
-      bio: 'Oversees internal audit functions to ensure transparency, accountability, and efficient use of organizational resources.',
-      image: '/images/henry.png',
-    },
-    {
-      name: 'Dr. Olayemi Joshua',
-      role: 'Head of Procurement/Logistics',
-      bio: 'Manages procurement processes and logistics operations to ensure efficient delivery of programs and services. Brings expertise in supply chain management and operational excellence.',
-      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FFLFMvqrNK2lrmcuVsSlS0TFimiWMc.png',
-    },
-    {
-      name: 'Mrs. Ime Jessica Awofisayo',
-      role: 'Head of Diagnostics/Analysis',
-      bio: 'Leads data analysis and diagnostic initiatives to measure program impact and inform strategic decision-making.',
-    },
-    {
-      name: 'Mr. Peter Okon Peter',
-      role: 'Administrative Officer',
-      bio: 'Manages day-to-day administrative operations and supports organizational efficiency.',
-    },
-  ]
-
-  const boardOfTrustees = [
-    { name: 'Dr. Inemesit Aniefiok Bassey', role: 'Trustee' },
-    { name: 'Mr. Mkpa Aniefiok Bassey', role: 'Trustee' },
-    { name: 'Ime Donald', role: 'Trustee' },
-    { name: 'Alice Agbo', role: 'Trustee' },
-  ]
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -101,7 +34,7 @@ export default function TeamPage() {
               </p>
             </div>
             <div className="max-w-2xl mx-auto">
-              {leadership.map((member) => (
+              {leadership.filter(member => member.name && member.name.trim()).map((member) => (
                 <Card key={member.name} className="overflow-hidden">
                   <div className="md:flex">
                     <div className="relative md:w-2/5 h-64 md:h-auto">
@@ -115,7 +48,13 @@ export default function TeamPage() {
                     <CardContent className="md:w-3/5 p-8">
                       <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
                       <p className="text-primary font-medium mb-4">{member.role}</p>
-                      <p className="text-muted-foreground leading-relaxed">{member.bio}</p>
+                      <p className="text-muted-foreground leading-relaxed mb-4">{truncateText(member.bio, 200)}</p>
+                      <Link
+                        href={`/team/${member.slug}`}
+                        className="text-primary hover:underline font-medium text-sm inline-flex items-center"
+                      >
+                        See more →
+                      </Link>
                     </CardContent>
                   </div>
                 </Card>
@@ -134,7 +73,7 @@ export default function TeamPage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              {boardOfTrustees.map((trustee) => (
+              {boardOfTrustees.filter(trustee => trustee.name && trustee.name.trim()).map((trustee) => (
                 <Card key={trustee.name}>
                   <CardContent className="p-6 text-center">
                     <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
@@ -161,7 +100,7 @@ export default function TeamPage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {teamMembers.map((member) => (
+              {teamMembers.filter(member => member.name && member.name.trim()).map((member) => (
                 <Card key={member.name}>
                   <CardContent className="p-6 text-center">
                     {member.image ? (
@@ -182,7 +121,13 @@ export default function TeamPage() {
                     )}
                     <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
                     <p className="text-sm text-primary mb-3">{member.role}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">{truncateText(member.bio, 120)}</p>
+                    <Link
+                      href={`/team/${member.slug}`}
+                      className="text-primary hover:underline font-medium text-xs inline-flex items-center"
+                    >
+                      See more →
+                    </Link>
                   </CardContent>
                 </Card>
               ))}
