@@ -2,7 +2,7 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Heart, Users, Globe, Handshake, ArrowRight } from 'lucide-react'
+import { Heart, Users, Globe, Handshake, ArrowRight, Briefcase, GraduationCap, Stethoscope } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -14,7 +14,7 @@ export default function HomePage() {
     alternateName: 'MEWI',
     url: 'https://megawakeupinternational.ng',
     logo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fxsuM1giKTqf5k7NM2nQAWoZZvKAy6.png',
-    description: 'Mega Wake Up International (MEWI) is a registered NGO providing emergency relief, empowerment programs, and poverty alleviation to communities across Nigeria.',
+    description: 'Mega Wake Up International Outreach (MEWI) is an indigenous Nigerian non-profit organization dedicated to improving access to qualitative healthcare, education, and economic strengthening services for the country\'s most vulnerable populations.',
     foundingDate: '2020',
     address: {
       '@type': 'PostalAddress',
@@ -34,12 +34,15 @@ export default function HomePage() {
       name: 'Nigeria',
     },
     knowsAbout: [
-      'Emergency Relief',
-      'Poverty Alleviation',
-      'Community Empowerment',
-      'Skills Acquisition',
+      'Economic Empowerment',
+      'Community & Social Welfare',
+      'Educational & Skill Acquisition',
+      'Healthcare Services',
+      'HIV/AIDS Prevention',
+      'Malaria Control',
+      'Tuberculosis Prevention',
       'Vocational Training',
-      'Medical Assistance',
+      'Capacity Building',
     ],
   }
 
@@ -58,10 +61,10 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-balance">
-                  Reaching Out. Making a Difference.
+                  Empowering Communities. Transforming Lives.
                 </h1>
                 <p className="text-lg leading-relaxed text-primary-foreground/90">
-                  Mega Wake Up International is dedicated to providing emergency relief, empowerment programs, and poverty alleviation to communities in need. Together, we create lasting change.
+                  Mega Wake Up International Outreach (MEWI) is an indigenous Nigerian non-profit organization dedicated to improving access to qualitative healthcare, education, and economic strengthening services for Nigeria's most vulnerable populations.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" variant="secondary" asChild>
@@ -110,31 +113,31 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Mission</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Creating an independent organization that focuses on providing emergency relief quickly, effectively, and without impartiality through poverty alleviation.
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                To create positive sustainable change in the lives of the less privileged, women, and adolescents/youths in Nigeria in the areas of educational/vocational training, skills acquisition, capacity building, economic development initiatives, mental health, and healthcare services.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  icon: Heart,
-                  title: 'Emergency Relief',
-                  description: 'Rapid response to communities affected by disasters and emergencies',
+                  icon: Briefcase,
+                  title: 'Economic Empowerment',
+                  description: 'Equipping individuals and communities with skills, resources, and opportunities for financial independence through entrepreneurship support, financial inclusion, and job creation programs',
                 },
                 {
                   icon: Users,
-                  title: 'Empowerment Programs',
-                  description: 'Skills training and economic empowerment for sustainable livelihoods',
+                  title: 'Community & Social Welfare',
+                  description: 'Supporting individuals and families through disability services, crisis intervention, food security initiatives, and addressing social issues like gender-based violence prevention',
                 },
                 {
-                  icon: Globe,
-                  title: 'Community Development',
-                  description: 'Building resilient communities through education and infrastructure',
+                  icon: GraduationCap,
+                  title: 'Education & Skill Acquisition',
+                  description: 'Providing vocational training, entrepreneurship education, industry certifications, and learning materials to enhance employability and career progression',
                 },
                 {
-                  icon: Handshake,
-                  title: 'Partnership Network',
-                  description: 'Collaborating with TELEPECON and other partners for greater impact',
+                  icon: Stethoscope,
+                  title: 'Healthcare Services',
+                  description: 'Addressing public health issues including HIV/AIDS, tuberculosis, and malaria prevention and control, while strengthening health systems and providing primary care services',
                 },
               ].map((item) => (
                 <Card key={item.title} className="hover:shadow-lg transition-shadow">
@@ -226,7 +229,7 @@ export default function HomePage() {
                   image: '/images/sunday.png',
                 },
                 {
-                  name: 'Mr. Udeme Ekpo',
+                  name: 'Udeme Wilson Ekpo',
                   role: 'Director Finance/Operations',
                   image: '/images/udeme.png',
                 },

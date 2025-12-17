@@ -16,7 +16,7 @@ export default function AboutPage() {
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 text-balance">About Us</h1>
               <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-                Learn more about Mega Wake Up International and our commitment to serving communities in need
+                An indigenous Nigerian non-profit organization dedicated to improving access to qualitative healthcare, education, and economic strengthening services
               </p>
             </div>
           </div>
@@ -30,13 +30,16 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Mega Wake Up International (MEWI) is a registered Non-Governmental Organization with the Nigerian Corporate Affairs Commission (CAC/IT/NO85950). We are charged with creating real and positive sustainable change in the lives of the less privileged, women, and youths in Nigeria.
+                    Mega Wake Up International Outreach (MEWI) is an indigenous Nigerian non-profit organization dedicated to improving access to qualitative healthcare, education, and economic strengthening services for the country's most vulnerable populations.
                   </p>
                   <p>
-                    Our team holds a combined wealth of experience in local and international development initiatives such as Skill Acquisition Programs, vocational training, capacity building, economic development, financial empowerment activities, providing medical assistance, and promoting ethical healthcare practices.
+                    As a registered Non-Governmental Organization with the Nigerian Corporate Affairs Commission (CAC/IT/NO85950), MEWI is committed to creating positive sustainable change in the lives of the less privileged, women, and adolescents/youths across Nigeria.
                   </p>
                   <p>
-                    We are proud members of The Less Privilege Empowerment Coordinators Networking (TELEPECON), working alongside other organizations to maximize our collective impact. We provide medical humanitarian assistance to people affected by conflict, epidemics, disasters, or exclusion from healthcare, and are known for our rapid response to crises and our commitment to providing aid based solely on need.
+                    Our organization focuses on four key areas: Economic Empowerment Initiatives, Community and Social Welfare Initiatives, Educational/Skill Acquisition/Capacity Building Initiatives, and Public Healthcare Services. We work in partnership with government and community stakeholders to build local capacity, integrate services into existing national frameworks, and ensure long-term sustainability.
+                  </p>
+                  <p>
+                    We are proud members of The Less Privilege Empowerment Coordinators Networking (TELEPECON), working alongside other organizations to maximize our collective impact and advocate for policies that benefit marginalized communities.
                   </p>
                 </div>
               </div>
@@ -63,7 +66,7 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-xl font-bold mb-4">Our Mission</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    To create an independent organization that focuses on providing emergency relief quickly, effectively, and without impartiality through poverty alleviation and community empowerment.
+                    To create positive sustainable change in the lives of the less privileged, women, and adolescents/youths in Nigeria in the areas of educational/vocational training, skills acquisition, capacity building, economic development initiatives, mental health, and healthcare services.
                   </p>
                 </CardContent>
               </Card>
@@ -101,27 +104,27 @@ export default function AboutPage() {
         {/* What We Do */}
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12">What We Do</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Our Focus Areas</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  title: 'Emergency Relief & Medical Assistance',
-                  description: 'Rapid response to natural disasters, conflicts, epidemics, and other emergencies with essential supplies including food, water, shelter, and medical humanitarian assistance to people affected by exclusion from healthcare.',
-                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-MRRFGtuqCM94ocrKTTKsiCM3yoyR9o.png',
-                },
-                {
-                  title: 'Skills Acquisition & Vocational Training',
-                  description: 'Comprehensive skills training, vocational education, and economic empowerment initiatives that help individuals build sustainable livelihoods and achieve self-sufficiency.',
+                  title: 'Economic Empowerment Initiatives',
+                  description: 'Targeted programs designed to equip individuals and communities, particularly marginalized groups, with the skills, resources, and opportunities needed to achieve financial independence. This includes access to financial services (financial inclusion), entrepreneurship support with training and mentorship, job creation and placement programs, social safety nets, and mentorship and networking platforms.',
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CbUFPyjIKIdxRXNzEJILVOGJwmstY0.png',
                 },
                 {
-                  title: 'Capacity Building & Entrepreneurship',
-                  description: 'Long-term projects focused on capacity building, entrepreneurship development, empowerment and poverty alleviation, helping women and youths define and address their economic and financial challenges.',
+                  title: 'Community & Social Welfare Initiatives',
+                  description: 'Programs and services designed to support individuals and families, reduce poverty and inequality, and promote overall community well-being. Key initiatives include disability services and advocacy, community development projects, crisis intervention and relief, elderly care and support, food security programs, and addressing social issues such as gender-based violence prevention, maternal and child health, and general community development.',
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yWOcf6eDNiVWsdL9Uzn5ztlrlMlZhF.png',
                 },
                 {
-                  title: 'Partnership & Advocacy',
-                  description: 'Collaborating with government, NGOs, and international organizations through TELEPECON to amplify our impact and advocate for policy change that benefits the less privileged.',
+                  title: 'Educational/Skill Acquisition Initiatives',
+                  description: 'Focused programs providing individuals with practical knowledge, technical expertise, and soft skills needed to enhance employability and career progression. This includes vocational and technical training (VET) programs, entrepreneurship training initiatives, industry-specific certification programs, and providing learning materials and training for educators to support formal and informal learning opportunities for children and youth.',
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-MRRFGtuqCM94ocrKTTKsiCM3yoyR9o.png',
+                },
+                {
+                  title: 'Public Healthcare Services',
+                  description: 'Addressing public health issues, fundamentally on HIV/AIDS, tuberculosis, and malaria, with emphasis on case identification, treatment, and prevention services. We focus on strengthening health systems, primary care (immunizations, family planning, maternal/child health), disease control, health education, environmental health, emergency preparedness, and data & research to inform policy.',
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-0wt2eX5EoEjxjkkflqLvhqCjLhbsxF.jpeg',
                 },
               ].map((program) => (

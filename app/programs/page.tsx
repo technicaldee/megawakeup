@@ -1,61 +1,64 @@
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { Card, CardContent } from '@/components/ui/card'
-import { Heart, Briefcase, GraduationCap, Home, Droplet, Users, Stethoscope, Package } from 'lucide-react'
+import { Heart, Briefcase, GraduationCap, Home, Droplet, Users, Stethoscope, Package, DollarSign, Shield, BookOpen, Activity } from 'lucide-react'
 import Image from 'next/image'
 
 export default function ProgramsPage() {
   const programs = [
     {
-      icon: Heart,
-      title: 'Emergency Relief & Disaster Response',
-      description: 'Rapid deployment of essential supplies and support to communities affected by natural disasters, conflicts, and emergencies. We provide food, water, shelter, medical aid, and psychosocial support.',
-      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TSgZ5VNH3eC8Ch4jbWx7usKt6XWut4.png',
-      impact: ['10,000+ people reached', 'COVID-19 relief packages distributed', '24/7 emergency response'],
-    },
-    {
       icon: Briefcase,
-      title: 'Economic Empowerment & Skills Training',
-      description: 'Comprehensive vocational training programs that equip individuals with marketable skills for sustainable livelihoods. Includes business management, entrepreneurship, and financial literacy.',
+      title: 'Economic Empowerment Initiatives',
+      description: 'Targeted programs designed to equip individuals and communities, particularly marginalized groups, with the skills, resources, and opportunities needed to achieve financial independence and control over their economic futures.',
       image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CbUFPyjIKIdxRXNzEJILVOGJwmstY0.png',
-      impact: ['500+ trained beneficiaries', 'Entrepreneurship workshops', 'Microfinance support'],
+      details: [
+        'Access to Financial Services (Financial Inclusion) - Providing access to banking, microfinance, and financial products for underserved populations',
+        'Entrepreneurship Support - Offering training, mentorship, and resources (like grants or seed capital) to help aspiring individuals start, manage, and grow their own small businesses',
+        'Job Creation and Placement Programs - Connecting individuals with employment opportunities and creating pathways to sustainable livelihoods',
+        'Social Safety Nets - Implementing social assistance programs like cash transfers, food stamps, and housing assistance to provide a safety net during economic hardship',
+        'Mentorship and Networking - Creating platforms for peer-to-peer support and mentorship programs to foster professional growth',
+      ],
     },
     {
       icon: Users,
-      title: 'Women & Youth Empowerment',
-      description: 'Targeted programs for women and youth focusing on leadership development, skills acquisition, and economic independence. Special emphasis on gender equality and youth participation.',
+      title: 'Community & Social Welfare Initiatives',
+      description: 'Targeted programs and services designed to support individuals and families, reduce poverty and inequality, and promote overall community well-being.',
       image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yWOcf6eDNiVWsdL9Uzn5ztlrlMlZhF.png',
-      impact: ['200+ women empowered', 'Youth leadership training', 'Gender equality advocacy'],
+      details: [
+        'Disability Services - Advocating for the rights and inclusion of persons with disabilities, providing assistive devices, support services, and employment opportunities',
+        'Community Development - Fostering local leadership and citizen participation in projects like building community centres, libraries, and recreational facilities',
+        'Crisis Intervention and Relief - Offering emergency assistance, disaster relief, and support for victims of abuse, violence, or other crises',
+        'Elderly Care and Support - Providing social support and care services for elderly community members',
+        'Food Security Initiatives - Implementing programs such as food stamps (SNAP), food banks, and nutrition assistance for vulnerable populations, including women, infants, and children (WIC)',
+        'Social Issues Advocacy - Addressing gender-based violence (GBV) prevention, maternal and child health, and general community development initiatives',
+      ],
     },
     {
       icon: GraduationCap,
-      title: 'Education & Literacy Programs',
-      description: 'Supporting access to quality education through scholarships, school supplies, and adult literacy programs. We believe education is the foundation for sustainable development.',
-      impact: ['Educational materials provided', 'Adult literacy classes', 'Scholarship programs'],
+      title: 'Educational/Skill Acquisition Initiatives',
+      description: 'Focused programs and strategies designed to provide individuals with practical knowledge, specific technical expertise, and soft skills needed to enhance their employability, improve career progression, or start their own businesses.',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-MRRFGtuqCM94ocrKTTKsiCM3yoyR9o.png',
+      details: [
+        'Vocational and Technical Training (VET) - Programs offering practical, hands-on training in specific trades and technical fields such as construction, mechanics, culinary arts, healthcare support, and IT support',
+        'Entrepreneurship Training - Providing business skills necessary to start and manage successful enterprises, including financial literacy, marketing, business plan development, and legal compliance',
+        'Industry-Specific Certification Programs - Training focused on obtaining specific professional certifications (e.g., project management, cybersecurity credentials) required for specialized job roles and career advancement',
+        'Educational Support - Providing learning materials, offering training for educators, and supporting formal and informal learning opportunities for children and youth',
+      ],
     },
     {
       icon: Stethoscope,
-      title: 'Healthcare & Nutrition',
-      description: 'Community health initiatives including medical outreach, nutrition programs, health education, and disease prevention campaigns to improve overall wellbeing.',
-      impact: ['Health outreach programs', 'Nutrition support', 'Health education'],
-    },
-    {
-      icon: Home,
-      title: 'Community Development',
-      description: 'Infrastructure projects and community-driven development initiatives that create lasting improvements in living conditions and community facilities.',
-      impact: ['Community infrastructure', 'Capacity building', 'Sustainable projects'],
-    },
-    {
-      icon: Droplet,
-      title: 'Water, Sanitation & Hygiene',
-      description: 'Ensuring access to clean water, proper sanitation facilities, and hygiene education to prevent waterborne diseases and improve public health.',
-      impact: ['Clean water access', 'Sanitation facilities', 'Hygiene campaigns'],
-    },
-    {
-      icon: Package,
-      title: 'Food Security & Agriculture',
-      description: 'Programs to combat hunger and promote food security through agricultural training, food distribution, and support for small-scale farmers.',
-      impact: ['Food distribution', 'Agricultural training', 'Farmer support'],
+      title: 'Public Healthcare Services',
+      description: 'Addressing public health issues, fundamentally on HIV/AIDS, tuberculosis, and malaria, with emphasis on case identification, treatment, and prevention services. We work in partnership with government and community stakeholders to build local capacity and ensure long-term sustainability.',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TSgZ5VNH3eC8Ch4jbWx7usKt6XWut4.png',
+      details: [
+        'Disease Control - Managing infectious diseases with focus on HIV/AIDS prevention and control, malaria, and tuberculosis through case identification, treatment, and prevention services',
+        'Primary Care Services - Providing immunizations, family planning, maternal/child health services, and basic care at local clinics',
+        'Health Education - Teaching healthy behaviours, nutrition advice, and disease prevention strategies to communities',
+        'Environmental Health - Addressing food safety, water quality, and workplace safety issues',
+        'Emergency Preparedness - Responding to outbreaks, natural disasters, and chemical emergencies',
+        'Data & Research - Collecting health data/surveillance, identifying trends, and conducting research to inform policy and improve health outcomes',
+        'Health Systems Strengthening - Working in partnership with government and community stakeholders to build local capacity, integrate services into existing national frameworks, and ensure long-term sustainability',
+      ],
     },
   ]
 
@@ -70,7 +73,7 @@ export default function ProgramsPage() {
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 text-balance">Our Programs</h1>
               <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-                Comprehensive interventions addressing immediate needs while building long-term resilience
+                Four comprehensive focus areas designed to create positive sustainable change in the lives of Nigeria's most vulnerable populations
               </p>
             </div>
           </div>
@@ -102,12 +105,12 @@ export default function ProgramsPage() {
                           <h3 className="text-2xl font-bold mb-3">{program.title}</h3>
                           <p className="text-muted-foreground leading-relaxed mb-6">{program.description}</p>
                           <div>
-                            <h4 className="font-semibold mb-2">Impact & Reach:</h4>
-                            <ul className="space-y-1">
-                              {program.impact.map((item, i) => (
-                                <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                  {item}
+                            <h4 className="font-semibold mb-3">Key Initiatives:</h4>
+                            <ul className="space-y-2">
+                              {program.details.map((item, i) => (
+                                <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                                  <span>{item}</span>
                                 </li>
                               ))}
                             </ul>
