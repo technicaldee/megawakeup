@@ -77,11 +77,12 @@ export default function GalleryPage() {
                   key={index}
                   className="group relative aspect-square overflow-hidden rounded-lg bg-muted"
                 >
+                  {/* i want the image to show the top first. not center it for overflow */}
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.title}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="object-top transition-transform duration-300 group-hover:scale-110 "
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
