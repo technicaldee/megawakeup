@@ -40,9 +40,9 @@ export default function GalleryPage() {
       category: 'Programs',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fxsuM1giKTqf5k7NM2nQAWoZZvKAy6.png',
-      title: 'MEWI Logo',
-      category: 'Branding',
+      src: '/inembassey.png',
+      title: 'Dr. (Mrs.) Inemesit Bassey',
+      category: 'Leadership',
     },
     {
       src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Rhsb2grF3V5yuUctBKDBAIp3iIIrLG.png',
