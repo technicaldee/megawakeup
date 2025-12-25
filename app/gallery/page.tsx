@@ -81,8 +81,8 @@ export default function GalleryPage() {
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.title}
-                    // fill
-                    className="object-top transition-transform duration-300 group-hover:scale-110 "
+                    fill
+                    className="object-cover object-top transition-transform duration-300 group-hover:scale-110 "
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
