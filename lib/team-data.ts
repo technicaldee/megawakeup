@@ -26,7 +26,7 @@ export const leadership: TeamMember[] = [
     name: 'Dr. (Mrs.) Inemesit Bassey',
     role: 'Founder & CEO',
     image: '/images/ceo1.png',
-    bio: 'Dr. (Mrs.) Inemesit Bassey is the Visionary Founder and Chief Executive Officer of Mega Wake Up International Outreach and the FCT Heritage Multi-Purpose Cooperative Society. Born on 25th May, 1970 in Anua, Uyo Local Government Area, and married to Mr. Mkpa Aniefiok Bassey of Essien Udim Local Government Area, both of Akwa Ibom State. Dr. (Mrs.) Bassey holds a BSc in Public Administration and Honorary Doctorate Degree in Theology.',
+    bio: 'Dr. (Mrs.) Inemesit Bassey is a passionate advocate for personal transformation and community development. She founded Mega Wake-Up International Outreach (MEWI) in March, 2016 and the FCT Heritage Multi-Purpose Co-operative Society thereafter to empower youths and underprivileged individuals through holistic personal development initiatives and programs.  She holds a Bachelor of Science degree in Public Administration from the University of Abuja and an honorary doctorate degree in Theology. She is well vested in community engagement initiatives and personal development activities. Dr. (Mrs.) Bassey’s vision is to create a world where lives of the less privileged ones, women, adolescence, youths in Nigeria feel valued, capable, and inspired to make a positive sustainable impact. The visionary founder and CEO of Mega Wake-Up International Outreach has transformed countless lives in education, vocational training, skills acquisition, economic empowerment by fostering purpose for healthy living and confidence for good living standards.',
     slug: 'dr-mrs-inemesit-bassey',
   },
 ]
