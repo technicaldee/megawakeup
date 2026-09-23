@@ -16,7 +16,7 @@ export default function DonatePage() {
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4 text-balance">Make a Difference Today</h1>
               <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-                Your generous donation helps us provide emergency relief and empower communities across Nigeria
+                Your generous support directly advances our 2037 strategic goals, empowering vulnerable communities across Nigeria through education, healthcare, sustainable agriculture, and economic self-reliance.
               </p>
             </div>
           </div>

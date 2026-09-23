@@ -2,9 +2,34 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Heart, Users, Globe, Handshake, ArrowRight, Briefcase, GraduationCap, Stethoscope } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import {
+  Users,
+  ArrowRight,
+  GraduationCap,
+  Sprout,
+  Briefcase,
+  HeartPulse,
+  Award,
+  ShieldCheck,
+  Trees,
+  Target,
+  Eye,
+  Sparkles,
+} from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { STRATEGY_DATA } from '@/lib/strategy-data'
+
+const goalIcons: Record<string, any> = {
+  GraduationCap,
+  Sprout,
+  Briefcase,
+  HeartPulse,
+  Award,
+  ShieldCheck,
+  Trees,
+}
 
 export default function HomePage() {
   const organizationSchema = {
@@ -14,7 +39,7 @@ export default function HomePage() {
     alternateName: 'MEWI',
     url: 'https://megawakeupinternational.ng',
     logo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fxsuM1giKTqf5k7NM2nQAWoZZvKAy6.png',
-    description: 'Mega Wake Up International Outreach (MEWI) is an indigenous Nigerian non-profit organization dedicated to improving access to qualitative healthcare, education, and economic strengthening services for the country\'s most vulnerable populations.',
+    description: STRATEGY_DATA.mission,
     foundingDate: '2020',
     address: {
       '@type': 'PostalAddress',
@@ -26,23 +51,22 @@ export default function HomePage() {
       contactType: 'Customer Service',
       availableLanguage: ['English'],
     },
-    sameAs: [
-      'https://twitter.com/megawake_up',
-    ],
+    sameAs: ['https://twitter.com/megawake_up'],
     areaServed: {
       '@type': 'Country',
       name: 'Nigeria',
     },
     knowsAbout: [
-      'Economic Empowerment',
-      'Community & Social Welfare',
-      'Educational & Skill Acquisition',
-      'Healthcare Services',
-      'HIV/AIDS Prevention',
-      'Malaria Control',
-      'Tuberculosis Prevention',
-      'Vocational Training',
-      'Capacity Building',
+      'Education and Skills Development',
+      'Sustainable Agriculture and Food Security',
+      'Economic Empowerment and Livelihoods',
+      'Healthcare and Public Health',
+      'Capacity Building and Leadership',
+      'Social Inclusion and Safeguarding',
+      'Environmental Sustainability and Climate Resilience',
+      'HIV/AIDS and Disease Prevention',
+      'Poverty Alleviation',
+      'Youth and Women Empowerment',
     ],
   }
 
@@ -60,18 +84,26 @@ export default function HomePage() {
           <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
+                <Badge variant="secondary" className="text-xs font-semibold uppercase tracking-wider">
+                  2027–2037 Strategic Horizon
+                </Badge>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-balance">
                   Empowering Communities. Transforming Lives.
                 </h1>
                 <p className="text-lg leading-relaxed text-primary-foreground/90">
-                  Mega Wake Up International Outreach (MEWI) is an indigenous Nigerian non-profit organization dedicated to improving access to qualitative healthcare, education, and economic strengthening services for Nigeria's most vulnerable populations.
+                  Mega Wake Up International Outreach (MEWI) is an indigenous Nigerian non-profit organization dedicated to fostering an inclusive, resilient, and prosperous Nigeria where girls, women, young people, and vulnerable populations thrive.
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 pt-2">
                   <Button size="lg" variant="secondary" asChild>
                     <Link href="/donate">Donate Now</Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                    <Link href="/programs">Our Programs</Link>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                    asChild
+                  >
+                    <Link href="/programs">Our 7 Strategic Goals</Link>
                   </Button>
                 </div>
               </div>
@@ -87,20 +119,30 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Impact Stats */}
-        <section className="py-16 bg-muted/30">
+        {/* 2037 Impact Ambition Stats Banner */}
+        <section className="py-16 bg-muted/40 border-b">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <Badge variant="outline" className="mb-2">Strategic Ambition Targets</Badge>
+              <h2 className="text-2xl sm:text-3xl font-bold">Targeting 20 Million+ Lives by 2037</h2>
+              <p className="text-sm text-muted-foreground mt-2">
+                Delivering sustainable, measurable development outcomes across Nigeria
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
-                { label: 'Communities Served', value: '50+' },
-                { label: 'Lives Impacted', value: '10,000+' },
-                { label: 'Active Programs', value: '15+' },
-                { label: 'Volunteers', value: '200+' },
+                { label: 'People Reached', value: '20M+', sub: 'Direct beneficiaries' },
+                { label: 'Female Target', value: '60%+', sub: 'Women & girls' },
+                { label: 'Youth Target', value: '70%+', sub: 'Ages 15–35 years' },
+                { label: 'Coverage', value: '36 + FCT', sub: 'All Nigerian states' },
+                { label: 'Communities', value: '10,000+', sub: 'Targeted localities' },
+                { label: 'Resources', value: '₦200B+', sub: 'Mobilization target' },
               ].map((stat) => (
-                <Card key={stat.label} className="text-center">
-                  <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <Card key={stat.label} className="text-center hover:border-primary/50 transition-colors">
+                  <CardContent className="p-5">
+                    <div className="text-2xl lg:text-3xl font-extrabold text-primary mb-1">{stat.value}</div>
+                    <div className="text-xs font-semibold text-foreground">{stat.label}</div>
+                    <div className="text-[10px] text-muted-foreground mt-0.5">{stat.sub}</div>
                   </CardContent>
                 </Card>
               ))}
@@ -108,83 +150,127 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Our Mission */}
+        {/* Mission & Vision Section */}
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Mission</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                To create positive sustainable change in the lives of the less privileged, women, and adolescents/youths in Nigeria in the areas of educational/vocational training, skills acquisition, capacity building, economic development initiatives, mental health, and healthcare services.
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Mission & Vision</h2>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Anchored on evidence-based programs, strategic partnerships, and innovation for long-term community transformation.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: Briefcase,
-                  title: 'Economic Empowerment',
-                  description: 'Equipping individuals and communities with skills, resources, and opportunities for financial independence through entrepreneurship support, financial inclusion, and job creation programs',
-                },
-                {
-                  icon: Users,
-                  title: 'Community & Social Welfare',
-                  description: 'Supporting individuals and families through disability services, crisis intervention, food security initiatives, and addressing social issues like gender-based violence prevention',
-                },
-                {
-                  icon: GraduationCap,
-                  title: 'Education & Skill Acquisition',
-                  description: 'Providing vocational training, entrepreneurship education, industry certifications, and learning materials to enhance employability and career progression',
-                },
-                {
-                  icon: Stethoscope,
-                  title: 'Healthcare Services',
-                  description: 'Addressing public health issues including HIV/AIDS, tuberculosis, and malaria prevention and control, while strengthening health systems and providing primary care services',
-                },
-              ].map((item) => (
-                <Card key={item.title} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <item.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-lg">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Mission Card */}
+              <Card className="border-primary/20 hover:shadow-md transition-shadow">
+                <CardContent className="p-8 space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Target className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                    {STRATEGY_DATA.mission}
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Vision Card */}
+              <Card className="border-primary/20 hover:shadow-md transition-shadow">
+                <CardContent className="p-8 space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Eye className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                    {STRATEGY_DATA.vision}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Strategic Goals / Focus Areas */}
+        <section className="py-20 bg-muted/30 border-y">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <Badge variant="outline" className="mb-2">Key Programmatic Pillars</Badge>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+                Eight Strategic Goals in Action
+              </h2>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Explore our core strategic pillars driving measurable development outcomes across Nigeria.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {STRATEGY_DATA.strategicGoals.map((goal) => {
+                const IconComponent = goalIcons[goal.icon] || Target
+                return (
+                  <Card key={goal.id} className="hover:shadow-lg transition-all hover:border-primary/50 flex flex-col justify-between">
+                    <CardContent className="p-6 space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <IconComponent className="h-6 w-6 text-primary" />
+                        </div>
+                        <Badge variant="secondary" className="text-xs">Goal {goal.number}</Badge>
+                      </div>
+                      <h3 className="font-semibold text-lg leading-snug">{goal.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                        {goal.goal}
+                      </p>
+                      <div className="pt-2">
+                        <Button variant="ghost" size="sm" className="p-0 text-primary hover:text-primary/80 hover:bg-transparent" asChild>
+                          <Link href={`/programs#${goal.id}`}>
+                            <span>View Targets & KPIs</span>
+                            <ArrowRight className="h-4 w-4 ml-1" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )
+              })}
+            </div>
+            <div className="text-center mt-12">
+              <Button asChild size="lg">
+                <Link href="/programs">
+                  View Full 2037 Targets & KPIs <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
 
         {/* Recent Work Showcase */}
-        <section className="py-20 bg-muted/30">
+        <section className="py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Work in Action</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                See how we're making a difference in communities across Nigeria
+                See how we're making a tangible difference in communities across Nigeria
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TSgZ5VNH3eC8Ch4jbWx7usKt6XWut4.png',
-                  title: 'COVID-19 Relief Distribution',
-                  description: 'Providing essential supplies to vulnerable communities during the pandemic',
+                  title: 'Community Medical Outreaches',
+                  description: 'Delivering healthcare screenings, medical supplies, and preventive services in underserved communities',
                 },
                 {
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yWOcf6eDNiVWsdL9Uzn5ztlrlMlZhF.png',
-                  title: 'Community Empowerment',
-                  description: 'Training and empowering women through skills development programs',
+                  title: 'Women & Youth Empowerment',
+                  description: 'Equipping women and youth with technical skills, financial literacy, and livelihood resources',
                 },
                 {
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-0wt2eX5EoEjxjkkflqLvhqCjLhbsxF.jpeg',
-                  title: 'TELEPECON Conference',
-                  description: 'Participating in the Less Privilege Empowerment Coordinators Network',
+                  title: 'TELEPECON Strategic Collaboration',
+                  description: 'Partnering across national networks to scale impact and advance humanitarian advocacy',
                 },
               ].map((project) => (
                 <Card key={project.title} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative h-48">
                     <Image
-                      src={project.image || "/placeholder.svg"}
+                      src={project.image || '/placeholder.svg'}
                       alt={project.title}
                       fill
                       className="object-cover"
@@ -208,12 +294,12 @@ export default function HomePage() {
         </section>
 
         {/* Leadership Preview */}
-        <section className="py-20">
+        <section className="py-20 bg-muted/30 border-t">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Leadership</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Meet the dedicated individuals driving positive change in communities across Nigeria
+                Meet the dedicated team driving evidence-based development and community transformation
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
@@ -224,19 +310,19 @@ export default function HomePage() {
                   image: '/images/ceo1.png',
                 },
                 {
-                  name: 'Prof. Sunday Awofisayo',
-                  role: 'Program Director',
+                  name: 'Prof. Sunday O. Awofisayo',
+                  role: 'Director, Programs & Humanitarian',
                   image: '/images/sunday.png',
                 },
                 {
                   name: 'Udeme Wilson Ekpo',
-                  role: 'Director Finance/Operations',
+                  role: 'Director, Finance & Operations',
                   image: '/images/udeme.png',
                 },
                 {
-                  name: 'Dr. Edidiong Ibup',
-                  role: 'Chief Health Officer',
-                  image: null,
+                  name: 'Chief Henry Akpan Obot',
+                  role: 'Director, Governance, Compliance, Audit, Risk & Legal',
+                  image: '/images/henry.png',
                 },
               ].map((member) => (
                 <Card key={member.name}>
@@ -253,7 +339,7 @@ export default function HomePage() {
                     ) : (
                       <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
                         <span className="text-2xl font-bold text-primary">
-                          {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                          {member.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
                         </span>
                       </div>
                     )}
@@ -266,7 +352,7 @@ export default function HomePage() {
             <div className="text-center">
               <Button asChild variant="outline" size="lg">
                 <Link href="/team">
-                  More <ArrowRight className="ml-2 h-4 w-4" />
+                  Meet the Entire Team <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -278,14 +364,19 @@ export default function HomePage() {
           <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Join Us in Making a Difference</h2>
             <p className="text-lg mb-8 leading-relaxed text-primary-foreground/90">
-              Your support helps us reach more communities and transform lives. Together, we can create lasting change.
+              Your support helps us reach 20 million lives and empower communities across Nigeria. Together, we create lasting sustainable impact.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/donate">Make a Donation</Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <Link href="/volunteer">Become a Volunteer</Link>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                asChild
+              >
+                <Link href="/contact">Partner With Us</Link>
               </Button>
             </div>
           </div>

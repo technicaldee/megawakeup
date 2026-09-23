@@ -20,7 +20,6 @@ const nextConfig = {
   // Production optimizations
   poweredByHeader: false,
   reactStrictMode: true,
-  swcMinify: true,
 }
 
 export default nextConfig

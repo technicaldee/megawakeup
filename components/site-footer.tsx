@@ -16,7 +16,7 @@ export function SiteFooter() {
               className="h-20 w-auto"
             />
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Creating an independent organization that focuses on providing emergency relief quickly, effectively, and without impartiality through poverty alleviation.
+              Empowering individuals and communities across Nigeria through evidence-based interventions in education, healthcare, sustainable agriculture, economic strengthening, social protection, and climate resilience.
             </p>
           </div>
           
