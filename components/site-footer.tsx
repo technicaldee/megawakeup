@@ -9,11 +9,11 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fxsuM1giKTqf5k7NM2nQAWoZZvKAy6.png"
-              alt="MEWI Logo"
-              width={80}
-              height={80}
-              className="h-20 w-auto"
+              src="/images/logo.png"
+              alt="Mega Wake Up International Outreach Logo"
+              width={200}
+              height={58}
+              className="h-14 sm:h-16 w-auto object-contain"
             />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Empowering individuals and communities across Nigeria through evidence-based interventions in education, healthcare, sustainable agriculture, economic strengthening, social protection, and climate resilience.

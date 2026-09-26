@@ -25,15 +25,16 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fxsuM1giKTqf5k7NM2nQAWoZZvKAy6.png"
-              alt="MEWI Logo"
-              width={50}
-              height={50}
-              className="h-12 w-auto"
+              src="/images/logo.png"
+              alt="Mega Wake Up International Outreach Logo"
+              width={166}
+              height={48}
+              className="h-11 sm:h-12 w-auto object-contain"
+              priority
             />
-            <span className="text-lg font-semibold hidden sm:block">Mega Wake Up International</span>
+            <span className="sr-only">Mega Wake Up International Outreach</span>
           </Link>
         </div>
         <div className="flex lg:hidden">

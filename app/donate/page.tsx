@@ -80,16 +80,16 @@ export default function DonatePage() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  amount: '₦5,000',
-                  impact: 'Provides emergency food supplies for a family of 5 for one week',
-                },
-                {
-                  amount: '₦20,000',
-                  impact: 'Supports skills training for one beneficiary to start a new livelihood',
-                },
-                {
                   amount: '₦50,000',
-                  impact: 'Funds a complete COVID-19 relief package for 10 households',
+                  impact: 'Provides emergency food supplies and essential relief support for vulnerable families',
+                },
+                {
+                  amount: '₦250,000',
+                  impact: 'Supports comprehensive skills training, vocational starter packs, and sustainable livelihood tools',
+                },
+                {
+                  amount: '₦500,000',
+                  impact: 'Funds vital community health outreaches, emergency relief interventions, and social protection kits',
                 },
               ].map((item) => (
                 <Card key={item.amount}>

@@ -38,7 +38,7 @@ export default function HomePage() {
     name: 'Mega Wake Up International',
     alternateName: 'MEWI',
     url: 'https://megawakeupinternational.ng',
-    logo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fxsuM1giKTqf5k7NM2nQAWoZZvKAy6.png',
+    logo: 'https://megawakeupinternational.ng/images/logo.png',
     description: STRATEGY_DATA.mission,
     foundingDate: '2020',
     address: {

@@ -375,21 +375,25 @@ export default function AboutPage() {
                 <CardContent className="pt-2">
                   <p className="text-xs text-muted-foreground mb-2">Key Supporting Units:</p>
                   <ul className="text-xs space-y-1 text-muted-foreground">
+                    <li className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      Programme Planning, Implementation & Quality Assurance
+                    </li>
                     <li className="font-semibold text-primary flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      Health, Nutrition & WASH Unit
+                      Humanitarian Response & Emergency Preparedness
                     </li>
                     <li className="flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/60" />
-                      Program Design & Project Management
+                      Livelihoods, Agriculture & Agribusiness
                     </li>
                     <li className="flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/60" />
-                      Humanitarian Response & Emergency Prep.
+                      Environmental Sustainability & Biodiversity Conservation
                     </li>
                     <li className="flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/60" />
-                      Livelihoods & Agribusiness
+                      Community Development & Social Inclusion
                     </li>
                   </ul>
                 </CardContent>

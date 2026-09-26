@@ -49,15 +49,15 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dr. Edidiong Efefiong Ibup',
     image: '/images/ibup.png',
-    role: 'Chief Health Officer',
-    bio: 'Dr. Edidiong Efefiong Ibup is a dedicated emergency medical officer with strong critical thinking and problem-solving skills. Holds an MBBS (2017) in Medicine and Surgery from Pirogov National Memorial Medical University, Vinnytsa, Ukraine. Currently serves as Emergency Medical Officer at Akwa Ibom State Emergency Medical and Ambulance System Services, Ministry of Health, Uyo (2024-Present), responding promptly to emergency calls, administering first aid and basic life support, and collaborating with ambulance teams during patient transport. Also serves as State Coordinator at Universal Council of Christ Ambassadors, Brotherhood of Cross and Star, Akwa Ibom State (2025-Present), Medical Sales Expert at Edymed Pharmacy Limited (2018-Present), and Co-Founder of Study Consult Group Pty Ltd, Mbabane Swaziland (2013-Present). Certified in Basic and Advanced Life Support and as a Health Emergency First Responder. Skilled in digital and project management, critical thinking, basic and advanced life support, problem-solving, teamwork, community outreach, partnership development, and compliance assurance. Experienced in providing life-saving support, ensuring compliance with safety protocols, and contributing to effective patient care in high-pressure environments. At MEWI, Dr. Ibup leads health initiatives and medical programs for community outreach efforts, bringing extensive emergency medical expertise and community engagement experience. Contact: ibupcom4life@yahoo.com | 08164044315, 09028007286 | No. 2 Port Harcourt Street, Uyo, Akwa Ibom State.',
+    role: 'Head, Humanitarian Response & Emergency Preparedness Unit',
+    bio: 'Dr. Edidiong Efefiong Ibup is a dedicated emergency medical officer and humanitarian leader with strong critical thinking, disaster management, and rapid-response expertise. Holds an MBBS (2017) in Medicine and Surgery from Pirogov National Memorial Medical University, Vinnytsa, Ukraine. Currently serves as Emergency Medical Officer at Akwa Ibom State Emergency Medical and Ambulance System Services, Ministry of Health, Uyo (2024-Present), responding promptly to emergency calls, administering first aid and basic life support, and collaborating with ambulance teams during patient transport. Also serves as State Coordinator at Universal Council of Christ Ambassadors, Brotherhood of Cross and Star, Akwa Ibom State (2025-Present), Medical Sales Expert at Edymed Pharmacy Limited (2018-Present), and Co-Founder of Study Consult Group Pty Ltd, Mbabane Swaziland (2013-Present). Certified in Basic and Advanced Life Support and as a Health Emergency First Responder. Skilled in digital and project management, critical thinking, basic and advanced life support, problem-solving, teamwork, community outreach, partnership development, and compliance assurance. At MEWI, Dr. Ibup serves as Head of the Humanitarian Response & Emergency Preparedness Unit, directing crisis relief operations, emergency health response, disaster readiness protocols, and mobile medical outreaches across vulnerable Nigerian communities. Contact: ibupcom4life@yahoo.com | 08164044315, 09028007286 | No. 2 Port Harcourt Street, Uyo, Akwa Ibom State.',
     slug: 'dr-edidiong-efefiong-ibup',
   },
   {
     name: 'Mrs. Chinwe Rejoice Victor',
-    role: 'Head of Human Resources',
+    role: 'Head, HR & Administration Unit',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ALKaCTekF21TW8dhHIrDqwevRPQobZ.png',
-    bio: 'Results-driven and ambitious Business Administration graduate with over 17 years of professional experience working full-time since 2007. Proficient in business planning and management, leadership solutions, data analysis, procurement, Human Resource specialization, and administrative management. Holds a B.Sc in Business Administration (2022), PGD in Business Management (2012), Higher Diploma in Business Admin (2011), and currently pursuing an MBA in Human Resource Management. Certified by the Institute of Strategic Management of Nigeria (ISMN, 2012). Currently serves as Head of Operations at Rechin Foundation for Women and Youth Empowerment (2017-2025), with previous experience as Business Development Officer at Capital Oil and Gas Ltd (2007-2014) and Administrative/Procurement Officer at Edla Petrochemical Nig Ltd (2005-2007). Expertise includes marketing and sales, procurement, data collection and analysis, Microsoft Office suite, and excellent organizational and communication skills. Contact: rejoiceinyama@gmail.com | 08062567218',
+    bio: 'Results-driven and ambitious Business Administration graduate with over 17 years of professional experience working full-time since 2007. Proficient in business planning and management, leadership solutions, data analysis, procurement, Human Resource specialization, and administrative management. Holds a B.Sc in Business Administration (2022), PGD in Business Management (2012), Higher Diploma in Business Admin (2011), and currently pursuing an MBA in Human Resource Management. Certified by the Institute of Strategic Management of Nigeria (ISMN, 2012). Currently serves as Head of Operations at Rechin Foundation for Women and Youth Empowerment (2017-2025), with previous experience as Business Development Officer at Capital Oil and Gas Ltd (2007-2014) and Administrative/Procurement Officer at Edla Petrochemical Nig Ltd (2005-2007). Expertise includes human capital management, organizational administration, procurement, data collection and analysis, Microsoft Office suite, and excellent organizational and communication skills. At MEWI, Mrs. Victor heads the HR & Administration Unit under the Finance & Operations Directorate, ensuring institutional operational excellence, staff welfare, talent governance, and compliance with statutory labor standards. Contact: rejoiceinyama@gmail.com | 08062567218',
     slug: 'mrs-chinwe-rejoice-victor',
   },
   {
@@ -97,9 +97,10 @@ export const teamMembers: TeamMember[] = [
 ]
 
 export const boardOfTrustees = [
-  { name: 'Dr. Inemesit Aniefiok Bassey', role: 'Trustee' },
-  { name: 'Mr. Mkpa Aniefiok Bassey', role: 'Trustee' },
-  { name: 'Ime Donald', role: 'Trustee' },
+  { name: 'Dr. Inemesit Aniefiok Bassey', role: 'Chairman, Board of Trustees' },
+  { name: 'Mr. UDEME WILSON EKPO', role: 'Trustee' },
+  { name: 'Prof. Sunday Olajide Awofisayo', role: 'Trustee' },
+  { name: 'Mr. Christian Bassey Oliver', role: 'Trustee' },
   { name: 'Alice Agbo', role: 'Trustee' },
 ]
 

@@ -6,7 +6,7 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
-const logoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fxsuM1giKTqf5k7NM2nQAWoZZvKAy6.png'
+const logoUrl = '/images/logo.png'
 const siteUrl = 'https://megawakeupinternational.ng'
 
 export const metadata: Metadata = {

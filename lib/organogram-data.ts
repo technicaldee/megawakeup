@@ -24,18 +24,23 @@ export const ORGANOGRAM_DATA = {
   governanceLevels: [
     {
       level: 'Board of Trustees (BOT)',
-      description: 'Provides strategic direction and fiduciary oversight',
+      description: 'Provides strategic direction and oversight',
       icon: 'Shield',
     },
     {
       level: 'Chief Executive Officer / Managing Director (CEO/MD)',
-      description: 'Overall organizational leadership, strategy, and management',
+      description: 'Overall leadership and management',
       lead: 'Dr. (Mrs.) Inemesit Bassey',
       icon: 'Award',
     },
     {
+      level: 'Office of the Secretary to the NGO',
+      description: 'Provides secretarial and administrative support to the MD/CEO',
+      icon: 'FileText',
+    },
+    {
       level: 'Deputy Managing Director (DMD)',
-      description: 'Supports the CEO/MD and oversees day-to-day organizational operations',
+      description: 'Supports the CEO/MD and oversees day-to-day operations',
       icon: 'Users',
     },
   ],
@@ -52,8 +57,7 @@ export const ORGANOGRAM_DATA = {
         image: '/images/sunday.png',
       },
       supportingUnits: [
-        'Health, Nutrition & WASH', // Explicitly added as requested
-        'Program Design & Project Management',
+        'Programme Planning, Implementation & Quality Assurance',
         'Humanitarian Response & Emergency Preparedness',
         'Livelihoods, Agriculture & Agribusiness (including Agri-Entrepreneurship)',
         'Environmental Sustainability & Biodiversity Conservation',
