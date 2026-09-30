@@ -24,7 +24,13 @@ import {
 
 export default function TeamPage() {
   // Separate director leadership from other team members
-  const directorSlugs = ['prof-sunday-o-awofisayo', 'udeme-wilson-ekpo', 'chief-henry-akpan-obot']
+  const directorSlugs = [
+    'prof-sunday-o-awofisayo',
+    'udeme-wilson-ekpo',
+    'mr-sifon-nelson-akpan',
+    'victor-emmanuel-idem',
+    'chief-henry-akpan-obot',
+  ]
   const directors = teamMembers.filter((m) => directorSlugs.includes(m.slug))
   const unitHeads = teamMembers.filter((m) => !directorSlugs.includes(m.slug) && m.name && m.name.trim())
   const allMembers = getAllTeamMembers()
@@ -35,6 +41,7 @@ export default function TeamPage() {
     if (normalized.includes('inemesit')) return '/images/ceo1.png'
     if (normalized.includes('udeme')) return '/images/udeme.png'
     if (normalized.includes('awofisayo')) return '/images/sunday.png'
+    if (normalized.includes('christian') || normalized.includes('oliver')) return '/images/christian-oliver.png'
     return null
   }
 
@@ -87,11 +94,11 @@ export default function TeamPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
               {boardOfTrustees.filter(trustee => trustee.name && trustee.name.trim()).map((trustee) => {
-                const photo = getTrusteePhoto(trustee.name)
+                const photo = trustee.image || getTrusteePhoto(trustee.name)
                 return (
                   <Card key={trustee.name} className="border-primary/20 hover:border-primary/50 transition-all hover:shadow-md flex flex-col justify-between">
                     <CardContent className="p-6 text-center flex flex-col items-center justify-between h-full">
-                      <div>
+                      <div className="w-full flex flex-col items-center">
                         {photo ? (
                           <div className="relative w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/20 shadow-xs">
                             <Image
@@ -112,14 +119,66 @@ export default function TeamPage() {
                         <Badge variant="secondary" className="text-[11px] font-medium text-primary mt-1">
                           {trustee.role}
                         </Badge>
+                        {trustee.title && (
+                          <p className="text-[11px] text-muted-foreground mt-2 line-clamp-2 leading-tight">
+                            {trustee.title}
+                          </p>
+                        )}
                       </div>
                       <div className="mt-4 pt-3 border-t w-full text-center">
-                        <span className="text-[11px] text-muted-foreground">Board Member</span>
+                        {trustee.slug ? (
+                          <Button asChild variant="ghost" size="sm" className="h-7 text-xs text-primary hover:text-primary/80 font-medium px-2">
+                            <Link href={`/team/${trustee.slug}`}>
+                              View Profile →
+                            </Link>
+                          </Button>
+                        ) : (
+                          <span className="text-[11px] text-muted-foreground">Board Member</span>
+                        )}
                       </div>
                     </CardContent>
                   </Card>
                 )
               })}
+            </div>
+
+            {/* Trustee Spotlight - Bassey Christian Oliver */}
+            <div className="mt-12 max-w-4xl mx-auto">
+              <Card className="overflow-hidden border-primary/30 shadow-md bg-gradient-to-br from-card via-card to-primary/5">
+                <div className="md:flex">
+                  <div className="relative md:w-2/5 h-80 md:h-auto min-h-[300px] bg-muted">
+                    <Image
+                      src="/images/christian-oliver.png"
+                      alt="Bassey Christian Oliver"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <CardContent className="md:w-3/5 p-8 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <Badge variant="secondary" className="text-xs">Trustee Profile</Badge>
+                        <span className="text-xs font-semibold text-primary">Board of Trustees</span>
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-bold mb-1 text-foreground">Bassey Christian Oliver</h3>
+                      <p className="text-primary font-semibold text-sm mb-3">
+                        Real Estate Professional | Philanthropist | Community Development Advocate
+                      </p>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                        Bassey Christian Oliver is a Nigerian real estate professional and philanthropist based in Abuja, with a strong interest in property investment, sustainable urban development, and community advancement. Born in Anua, Uyo LGA of Akwa Ibom State, and educated in Lagos, his experiences shape strategic property opportunities and sustainable living spaces.
+                      </p>
+                    </div>
+                    <div className="pt-2 flex items-center justify-between">
+                      <Button asChild size="sm">
+                        <Link href="/team/bassey-christian-oliver">
+                          Read Full Profile <ArrowRight className="ml-1.5 h-4 w-4" />
+                        </Link>
+                      </Button>
+                      <span className="text-xs text-muted-foreground">Abuja, Nigeria</span>
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
             </div>
           </div>
         </section>
@@ -242,7 +301,7 @@ export default function TeamPage() {
             </div>
 
             {/* Directorate Leadership Profiles */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 max-w-7xl mx-auto mb-16">
               {directors.map((director) => (
                 <Card key={director.name} className="flex flex-col overflow-hidden hover:shadow-lg transition-shadow border-primary/20">
                   <div className="relative h-64 w-full bg-muted">

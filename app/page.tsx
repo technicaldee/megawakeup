@@ -302,7 +302,7 @@ export default function HomePage() {
                 Meet the dedicated team driving evidence-based development and community transformation
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 max-w-6xl mx-auto mb-8">
               {[
                 {
                   name: 'Dr. (Mrs.) Inemesit Bassey',
@@ -320,8 +320,13 @@ export default function HomePage() {
                   image: '/images/udeme.png',
                 },
                 {
+                  name: 'Mr. Sifon Nelson Akpan',
+                  role: 'Director, MEAL Directorate',
+                  image: '/images/sifon-akpan.png',
+                },
+                {
                   name: 'Chief Henry Akpan Obot',
-                  role: 'Director, Governance, Compliance, Audit, Risk & Legal',
+                  role: 'Director, Governance & Compliance',
                   image: '/images/henry.png',
                 },
               ].map((member) => (

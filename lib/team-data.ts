@@ -54,6 +54,27 @@ export const teamMembers: TeamMember[] = [
     slug: 'dr-edidiong-efefiong-ibup',
   },
   {
+    name: 'Tpl. Godwin Effiong Edet, RTP',
+    role: 'Head, Environmental Sustainability & Biodiversity Conservation Unit',
+    image: '/images/godwin-edet.png',
+    bio: `TPL. Godwin Effiong Edet, RTP 2817, is a Registered Town Planner specializing in Coastal Zone Planning and Sustainable Settlement Development in Akwa Ibom State. At MEWI, he serves as Head of the Environmental Sustainability & Biodiversity Conservation Unit under the Programs & Humanitarian Services Directorate.
+
+His focus is the orderly planning of the coastal corridor - Ibeno, Eastern Obolo, Mbo, Oron, Okobo, Ikot Abasi, Eket - to address coastal erosion, uncoordinated development, infrastructure deficits, and untapped waterfront potentials.
+
+His approach integrates land-use, blue economy, eco-tourism, fisheries settlement, housing, infrastructure, and environmental management.
+
+Professional Focus:
+• Coastal & Waterfront Planning
+• Land-Use & Spatial Planning
+• Development Control
+• Fishing Settlement Upgrading
+• Blue Economy & Tourism Planning
+• Climate Resilience & Environmental Planning
+
+Commitment: Committed to promoting orderly, resilient, and people-centred coastal development in line with Akwa Ibom ARISE Agenda. He is available to provide professional services for the planning and development of coastal areas in Akwa Ibom State.`,
+    slug: 'tpl-godwin-effiong-edet',
+  },
+  {
     name: 'Mrs. Chinwe Rejoice Victor',
     role: 'Head, HR & Administration Unit',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ALKaCTekF21TW8dhHIrDqwevRPQobZ.png',
@@ -73,6 +94,50 @@ export const teamMembers: TeamMember[] = [
     bio: 'Chief Henry Akpan Obot is the Director of Governance, Compliance, Audit, Risk & Legal Affairs at MEWI. Native of Ikot Aba in Mkpat Enin LGA, Akwa Ibom State, born on 15th December 1956. A seasoned and certified banker with over 25 years of industry experience, he meritoriously retired as Network Branches Controller with major responsibility to secure bank assets through auditing and compliance provisions. Chief Obot has widely traveled transversing all the 36 states/FCT and overseas, bringing extensive national and international exposure to his role. Currently, he serves as Chairman/CEO of DICKSTIME VENTURES LIMITED, a company involved in Consultancy Services based in Abuja. His extensive banking background in governance, audit, compliance, and corporate risk management makes him uniquely qualified to direct the directorate, ensuring transparency, institutional integrity, accountability, and safeguarding across MEWI.',
     image: '/images/henry.png',
     slug: 'chief-henry-akpan-obot',
+  },
+  {
+    name: 'Mr. Sifon Nelson Akpan',
+    role: 'Director, MEAL Directorate (Monitoring, Evaluation, Accountability & Learning)',
+    image: '/images/sifon-akpan.png',
+    bio: `Mr. Sifon Nelson Akpan is an accomplished Banking and Financial Management Professional with over 11 years of progressive experience in branch operations, customer service management, accounts reconciliation, cash and vault management, team leadership, and regulatory compliance.
+
+During his career with First Bank, Mr. Akpan held several positions of increasing responsibility, including Head, Branch Services; Head, Accounts and Vault Management; and Supervisor/Head, Customer Service. In these roles, he provided effective leadership in branch operations, supervised service teams, strengthened operational controls, managed cash and vault activities, and ensured compliance with banking policies and regulatory requirements.
+
+As Head, Branch Services, he oversaw branch service operations and supervised frontline personnel to ensure efficient, accurate, and customer-focused service delivery. His responsibilities also included strengthening operational processes and maintaining high standards of compliance.
+
+Previously, as Head, Accounts and Vault Management, he managed account reconciliation, cash operations, vault security, and financial controls, contributing to accurate balancing and effective cash management.
+
+His earlier experience in Customer Service Management equipped him with strong skills in customer relationship management, problem resolution, staff mentoring, and service excellence.
+
+Mr. Akpan holds a B.Sc. in Accounting from the University of Uyo. He combines his academic background in accounting with extensive practical banking experience and strong managerial capabilities.
+
+Areas of Expertise:
+• Branch Operations & Management
+• Data Management & Reporting
+• Quality Assurance
+• Financial Controls & Account Reconciliation
+• Operational Efficiency
+• Supervisory, Monitoring, Evaluation & Managerial Leadership
+
+With his strong background in banking operations, financial controls, customer service, and people management, Mr. Sifon Nelson Akpan brings professionalism, accountability, operational discipline, and leadership to every organization and assignment he serves.`,
+    slug: 'mr-sifon-nelson-akpan',
+  },
+  {
+    name: 'Victor Emmanuel Idem',
+    role: 'Director, Communications, Advocacy & Stakeholders Engagement Directorate',
+    image: '/images/victor-idem.png',
+    bio: `Victor Emmanuel Idem is a seasoned banking and compliance professional with over two decades of experience spanning financial services, relationship and key account management, credit management, corporate governance, compliance, remedial and classified assets management, business development, and human resources/training.
+
+He holds a B.Sc. in Banking & Finance and postgraduate qualifications in Corporate Governance, Personnel Management, and Corporate Administration. He is also an Associate Member of the Institute of Chartered Secretaries and Administrators of Nigeria (ICSAN) and the Chartered Institute of Personnel Management of Nigeria (CIPM), with professional credentials including HRPL, ACIA, ACIPM and ACIS.
+
+Victor has built extensive experience with First Bank of Nigeria Limited, progressing through roles including Relationship Manager/Credit Monitoring and Recovery Officer, Team Lead/Recovery Business in Remedial and Classified Assets Management, Business Manager, and Business Relationship Manager. His responsibilities have included customer and key account management, credit origination and monitoring, loan appraisal and remediation, recovery of delinquent facilities, regulatory compliance, business development, and branch performance management. His experience also includes applying Pareto Analysis and Key Account Management tools to identify and focus on high-value customers, contributing to branch KPI achievements exceeding 80% in documented periods.
+
+He has strong experience in risk assets creation, loan appraisal, delinquent facility remediation, debt recovery, stakeholder engagement, corporate governance, and operational processes within the Nigerian financial services sector. He has also demonstrated capability in developing training and learning programmes, facilitating professional development activities, and supporting staff development.
+
+In addition to his banking career, Victor has experience in business development and training consultancy, including developing business plans for SMEs, designing training modules, coordinating training programmes, and conducting post-training monitoring and evaluation. He further strengthened his analytical capabilities through a six-week Data Analysis using Advanced Excel & Power BI programme completed in March 2024.
+
+His core strengths include analytical and problem-solving skills, communication, presentation and facilitation, relationship management, credit and risk management, compliance, corporate governance, training and development, and business development.`,
+    slug: 'victor-emmanuel-idem',
   },
   {
     name: 'Dr. Olayemi Joshua',
@@ -96,21 +161,90 @@ export const teamMembers: TeamMember[] = [
   },
 ]
 
-export const boardOfTrustees = [
-  { name: 'Dr. Inemesit Aniefiok Bassey', role: 'Chairman, Board of Trustees' },
-  { name: 'Mr. UDEME WILSON EKPO', role: 'Trustee' },
-  { name: 'Prof. Sunday Olajide Awofisayo', role: 'Trustee' },
-  { name: 'Mr. Christian Bassey Oliver', role: 'Trustee' },
-  { name: 'Alice Agbo', role: 'Trustee' },
+export interface TrusteeMember {
+  name: string
+  role: string
+  title?: string
+  image?: string
+  bio?: string
+  slug?: string
+}
+
+export const boardOfTrustees: TrusteeMember[] = [
+  {
+    name: 'Dr. Inemesit Aniefiok Bassey',
+    role: 'Chairman, Board of Trustees',
+    image: '/images/ceo1.png',
+    slug: 'dr-mrs-inemesit-bassey',
+  },
+  {
+    name: 'Mr. UDEME WILSON EKPO',
+    role: 'Trustee',
+    image: '/images/udeme.png',
+    slug: 'udeme-wilson-ekpo',
+  },
+  {
+    name: 'Prof. Sunday Olajide Awofisayo',
+    role: 'Trustee',
+    image: '/images/sunday.png',
+    slug: 'prof-sunday-o-awofisayo',
+  },
+  {
+    name: 'Bassey Christian Oliver',
+    role: 'Trustee',
+    title: 'Real Estate Professional | Philanthropist | Community Development Advocate',
+    image: '/images/christian-oliver.png',
+    bio: `Bassey Christian Oliver is a Nigerian real estate professional and philanthropist based in Abuja, with a strong interest in property investment, sustainable urban development, and community advancement.
+
+Born in Anua, Uyo Local Government Area of Akwa Ibom State, and educated in Lagos, Christian's experiences across Nigeria's major economic centres have shaped his understanding of the country's dynamic real estate and development landscape.
+
+He focuses on identifying strategic property opportunities and contributing to the development of modern, functional, and sustainable living spaces within the Federal Capital Territory. His approach combines commercial insight with a commitment to responsible development and long-term value creation.
+
+Beyond real estate, Christian is passionate about philanthropy and community development, supporting initiatives focused on youth empowerment, education, and improved community wellbeing.
+
+Through his professional and philanthropic engagements, Christian seeks to create lasting value—not only through property and investment, but also by contributing to stronger communities and greater opportunities for future generations.`,
+    slug: 'bassey-christian-oliver',
+  },
+  {
+    name: 'Alice Agbo',
+    role: 'Trustee',
+  },
 ]
 
 // Get all team members for bio lookup
 export function getAllTeamMembers(): TeamMember[] {
-  return [...leadership, ...teamMembers]
+  const trusteeMembers: TeamMember[] = boardOfTrustees
+    .filter((t): t is TrusteeMember & { bio: string; slug: string } => Boolean(t.bio && t.slug))
+    .map((t) => ({
+      name: t.name,
+      role: `${t.role}${t.title ? ` • ${t.title}` : ''}`,
+      image: t.image,
+      bio: t.bio,
+      slug: t.slug,
+    }))
+
+  const existingSlugs = new Set([...leadership, ...teamMembers].map((m) => m.slug))
+  const uniqueTrustees = trusteeMembers.filter((t) => !existingSlugs.has(t.slug))
+
+  return [...leadership, ...teamMembers, ...uniqueTrustees]
 }
 
 // Get team member by slug
 export function getTeamMemberBySlug(slug: string): TeamMember | undefined {
   const allMembers = getAllTeamMembers()
-  return allMembers.find(member => member.slug === slug)
+  const member = allMembers.find((member) => member.slug === slug)
+  if (member) return member
+  if (slug === 'christian-bassey-oliver' || slug === 'mr-christian-bassey-oliver' || slug === 'christian-oliver') {
+    return allMembers.find((m) => m.slug === 'bassey-christian-oliver')
+  }
+  if (slug === 'sifon-nelson-akpan' || slug === 'sifon-akpan' || slug === 'mr-sifon-akpan') {
+    return allMembers.find((m) => m.slug === 'mr-sifon-nelson-akpan')
+  }
+  if (slug === 'godwin-effiong-edet' || slug === 'godwin-edet' || slug === 'tpl-godwin-edet') {
+    return allMembers.find((m) => m.slug === 'tpl-godwin-effiong-edet')
+  }
+  if (slug === 'victor-idem' || slug === 'mr-victor-emmanuel-idem' || slug === 'victor-emmanuel') {
+    return allMembers.find((m) => m.slug === 'victor-emmanuel-idem')
+  }
+  return undefined
 }

@@ -86,6 +86,12 @@ export const ORGANOGRAM_DATA = {
       id: 'meal',
       name: 'MEAL Directorate',
       shortName: 'MEAL (Monitoring, Evaluation, Accountability & Learning)',
+      lead: {
+        name: 'Mr. Sifon Nelson Akpan',
+        role: 'Director, MEAL',
+        slug: 'mr-sifon-nelson-akpan',
+        image: '/images/sifon-akpan.png',
+      },
       supportingUnits: [
         'Monitoring & Evaluation',
         'Learning & Knowledge Management',
@@ -110,6 +116,12 @@ export const ORGANOGRAM_DATA = {
       id: 'communications-advocacy',
       name: 'Communications, Advocacy & Stakeholders Engagement Directorate',
       shortName: 'Communications, Advocacy & Engagement',
+      lead: {
+        name: 'Victor Emmanuel Idem',
+        role: 'Director, Communications, Advocacy & Stakeholders Engagement',
+        slug: 'victor-emmanuel-idem',
+        image: '/images/victor-idem.png',
+      },
       supportingUnits: [
         'Internal & External Communications',
         'Media Relations',
