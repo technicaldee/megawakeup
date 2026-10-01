@@ -103,6 +103,12 @@ export const ORGANOGRAM_DATA = {
       id: 'resources-mobilization',
       name: 'Resources Mobilization & Partnership Directorate',
       shortName: 'Resources Mobilization & Partnership',
+      lead: {
+        name: 'Eberechi Anita Igwe',
+        role: 'Director, Resources Mobilization & Partnership',
+        slug: 'eberechi-anita-igwe',
+        image: '/images/eberechi-igwe.png',
+      },
       supportingUnits: [
         'Donor Relations & Fundraising',
         'Grants & Proposal Development',

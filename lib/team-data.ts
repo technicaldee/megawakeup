@@ -123,6 +123,23 @@ With his strong background in banking operations, financial controls, customer s
     slug: 'mr-sifon-nelson-akpan',
   },
   {
+    name: 'Eberechi Anita Igwe',
+    role: 'Director, Resources Mobilization & Partnership Directorate',
+    image: '/images/eberechi-igwe.png',
+    bio: `Eberechi Anita Igwe is a distinguished Public Sector Administration and Management Professional with multidisciplinary expertise in public administration, human resource management, financial management, organisational development, performance management, procurement, enterprise information management, and institutional governance.
+
+With a strong commitment to humanitarian and development-focused work, she brings strategic leadership, administrative expertise, and a results-oriented approach to strengthening organisations and supporting programmes that create meaningful and sustainable impact in communities. Her professional competencies position her to contribute effectively to programme coordination, institutional strengthening, resource management, stakeholder engagement, accountability, and effective service delivery.
+
+She has undertaken extensive professional training in ISO 9001:2015 Quality Management Systems, performance management, procurement and contract management, inventory and warehouse management, transparency and accountability, conflict and crisis management, project management, public service administration, executive management, and professional reporting.
+
+She is a member of the Association of National Accountants of Nigeria (ANAN), Nigerian Institute of Management, Chartered (MNIM), Institute of Chartered Economists of Nigeria (ICEN), and Chartered Institute of Public Diplomacy and Management (CIPDM).
+
+Her leadership philosophy is anchored on integrity, accountability, collaboration, innovation, inclusion, and continuous improvement. She is particularly passionate about strengthening teams, developing people, improving organisational systems, supporting evidence-based decision-making, and fostering partnerships that advance sustainable development.
+
+Through her combination of professional competence, leadership, policy and research interests, and commitment to service, Eberechi Anita Igwe contributes to the organisation's mission of building effective institutions, empowered teams, accountable systems, and sustainable programmes that deliver lasting value to the communities they serve.`,
+    slug: 'eberechi-anita-igwe',
+  },
+  {
     name: 'Victor Emmanuel Idem',
     role: 'Director, Communications, Advocacy & Stakeholders Engagement Directorate',
     image: '/images/victor-idem.png',
@@ -236,6 +253,9 @@ export function getTeamMemberBySlug(slug: string): TeamMember | undefined {
   if (member) return member
   if (slug === 'christian-bassey-oliver' || slug === 'mr-christian-bassey-oliver' || slug === 'christian-oliver') {
     return allMembers.find((m) => m.slug === 'bassey-christian-oliver')
+  }
+  if (slug === 'eberechi-igwe' || slug === 'anita-igwe' || slug === 'eberechi-anita') {
+    return allMembers.find((m) => m.slug === 'eberechi-anita-igwe')
   }
   if (slug === 'sifon-nelson-akpan' || slug === 'sifon-akpan' || slug === 'mr-sifon-akpan') {
     return allMembers.find((m) => m.slug === 'mr-sifon-nelson-akpan')

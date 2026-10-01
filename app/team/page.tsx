@@ -28,6 +28,7 @@ export default function TeamPage() {
     'prof-sunday-o-awofisayo',
     'udeme-wilson-ekpo',
     'mr-sifon-nelson-akpan',
+    'eberechi-anita-igwe',
     'victor-emmanuel-idem',
     'chief-henry-akpan-obot',
   ]
