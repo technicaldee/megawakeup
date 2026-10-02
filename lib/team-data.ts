@@ -166,8 +166,8 @@ His core strengths include analytical and problem-solving skills, communication,
   {
     name: 'Mrs. Jessica I. Awofisayo',
     image: '/images/mrs-awofisayo.png',
-    role: 'Head of Diagnostics/Analysis',
-    bio: 'Mrs. Jessica I. Awofisayo is a dynamic professional and Managing Director of Bioscientific Research and Development Ltd. With a robust academic background including HND Accounting, PGD Business Management, MSc Business Sciences, and a Diploma in Social Works, she blends financial acumen with strategic leadership. As a trainer with Bioscird Training, Jessica empowers teams while steering her company towards bioscientific innovation and growth. Her expertise spans financial oversight, research and development, and capacity building, driving impact in both business and community development. At MEWI, she leads data analysis and diagnostic initiatives to measure program impact and inform strategic decision-making, leveraging her comprehensive background in business sciences and social work.',
+    role: 'Head, Programme Planning, Implementation & Quality Assurance',
+    bio: 'Mrs. Jessica I. Awofisayo is a dynamic professional and Managing Director of Bioscientific Research and Development Ltd. With a robust academic background including HND Accounting, PGD Business Management, MSc Business Sciences, and a Diploma in Social Works, she blends financial acumen with strategic leadership. As a trainer with Bioscird Training, Jessica empowers teams while steering her company towards bioscientific innovation and growth. Her expertise spans financial oversight, research and development, and capacity building, driving impact in both business and community development. At MEWI, she heads Programme Planning, Implementation & Quality Assurance, drawing on her comprehensive background in business sciences and social work.',
     slug: 'mrs-jessica-i-awofisayo',
   },
   {

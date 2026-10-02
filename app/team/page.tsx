@@ -462,7 +462,7 @@ export default function TeamPage() {
               <Badge variant="outline" className="mb-2">Tier 4: Supporting Units</Badge>
               <h2 className="text-3xl font-bold mb-4">4. Unit Heads & Management</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Experienced professionals and unit leads driving technical operations across emergency preparedness, human resources, compliance, diagnostics, and general administration.
+                Experienced professionals and unit leads driving technical operations across emergency preparedness, human resources, compliance, programme planning, implementation, quality assurance, and general administration.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
