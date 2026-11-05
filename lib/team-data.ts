@@ -21,6 +21,22 @@ export function truncateText(text: string, maxLength: number = 150): string {
   return text.slice(0, maxLength).trim() + '...'
 }
 
+/** Display order for unit heads — follows supporting units across ORGANOGRAM_DATA directorates */
+const UNIT_HEAD_ORGANOGRAM_RANK: Record<string, number> = {
+  'mrs-jessica-i-awofisayo': 0,
+  'dr-edidiong-efefiong-ibup': 1,
+  'associate-professor-job-inibehe-archibong': 2,
+  'tpl-godwin-effiong-edet': 3,
+  'dr-olayemi-joshua': 6,
+  'mrs-chinwe-rejoice-victor': 7,
+  'mr-david-adekunle-adetona': 27,
+  'mr-peter-okon-peter': 1000,
+}
+
+export function getUnitHeadOrganogramRank(slug: string): number {
+  return UNIT_HEAD_ORGANOGRAM_RANK[slug] ?? 999
+}
+
 export const leadership: TeamMember[] = [
   {
     name: 'Dr. (Mrs.) Inemesit Bassey',
@@ -34,7 +50,7 @@ export const leadership: TeamMember[] = [
 export const teamMembers: TeamMember[] = [
   {
     name: 'Prof. Sunday O. Awofisayo',
-    role: 'Director, Programs & Humanitarian',
+    role: 'Director, Programs & Humanitarian Services',
     image: '/images/sunday.png',
     bio: 'Professor Sunday O. Awofisayo is the Director of Programs & Humanitarian Services at MEWI. A distinguished academic and clinician with a pharmacy background, driven by a passion for training and youth employment. As Principal Researcher at Bioscientific Research and Development Ltd., he leverages expertise in public analysis – specializing in food, water, drugs, and cosmetics – to bridge cutting-edge research with real-world impact. Skilled in strategic capacity building, he empowers youth while advancing bioscientific innovation. His work blends clinical insight with analytical rigor, fostering solutions for public health and community growth. A visionary trainer passionately driving training, youth employment, and healthcare innovation, Professor Awofisayo merges clinical expertise with biopharmaceutical and biomedical research to craft impactful solutions. Specializing in the analysis of food, water, drugs, and cosmetics, he ensures safety and quality standards while spearheading cutting-edge projects that intersect public health and technology. A strategic leader, he excels in capacity building, mentoring young scientists, and fostering collaborations that accelerate bioscientific breakthroughs. His work bridges laboratory insights with community-driven outcomes, addressing pressing health challenges through biopharmaceutics, biomedical advancements, and data-driven strategies. With a focus on transformative leadership, he champions youth empowerment and interdisciplinary research, shaping the next generation of healthcare professionals. His dual commitment to scientific rigor and societal impact positions him as a catalyst for progress in biopharmaceutical innovation and global health resilience. Holds PhD, MBA, MSc, and BSc qualifications.',
     slug: 'prof-sunday-o-awofisayo',
@@ -52,6 +68,27 @@ export const teamMembers: TeamMember[] = [
     role: 'Head, Humanitarian Response & Emergency Preparedness Unit',
     bio: 'Dr. Edidiong Efefiong Ibup is a dedicated emergency medical officer and humanitarian leader with strong critical thinking, disaster management, and rapid-response expertise. Holds an MBBS (2017) in Medicine and Surgery from Pirogov National Memorial Medical University, Vinnytsa, Ukraine. Currently serves as Emergency Medical Officer at Akwa Ibom State Emergency Medical and Ambulance System Services, Ministry of Health, Uyo (2024-Present), responding promptly to emergency calls, administering first aid and basic life support, and collaborating with ambulance teams during patient transport. Also serves as State Coordinator at Universal Council of Christ Ambassadors, Brotherhood of Cross and Star, Akwa Ibom State (2025-Present), Medical Sales Expert at Edymed Pharmacy Limited (2018-Present), and Co-Founder of Study Consult Group Pty Ltd, Mbabane Swaziland (2013-Present). Certified in Basic and Advanced Life Support and as a Health Emergency First Responder. Skilled in digital and project management, critical thinking, basic and advanced life support, problem-solving, teamwork, community outreach, partnership development, and compliance assurance. At MEWI, Dr. Ibup serves as Head of the Humanitarian Response & Emergency Preparedness Unit, directing crisis relief operations, emergency health response, disaster readiness protocols, and mobile medical outreaches across vulnerable Nigerian communities. Contact: ibupcom4life@yahoo.com | 08164044315, 09028007286 | No. 2 Port Harcourt Street, Uyo, Akwa Ibom State.',
     slug: 'dr-edidiong-efefiong-ibup',
+  },
+  {
+    name: 'Associate Professor Job Inibehe Archibong, Ph.D.',
+    role: 'Unit Head, Livelihoods, Agriculture & Agribusiness (including Agri-Entrepreneurship)',
+    image: '/images/PHOTO-2026-10-05-16-14-29.jpg',
+    bio: `Academic | Agricultural Education Specialist | Researcher | Community Development Advocate
+
+Associate Professor Job Inibehe Archibong, Ph.D., is an accomplished academic, researcher and agricultural education specialist with extensive experience in education, sustainable agriculture, youth development, research and community-oriented initiatives.
+
+He is an Associate Professor in the Department of Agricultural Education, University of Uyo, where he has served since 2013. He holds a Ph.D. in Agricultural Education, an M.Sc. and a B.Sc. in Agricultural Education from the University of Uyo.
+
+With a strong background in agricultural and vocational education, Professor Archibong's professional expertise encompasses sustainable agricultural practices, crop production, soil and water conservation, agricultural entrepreneurship, farm management, curriculum development, youth leadership and skills development. His academic work is strongly focused on equipping young people with practical knowledge and skills that can contribute to food security, livelihoods and sustainable community development.
+
+Throughout his career, he has provided academic and institutional leadership through various responsibilities, including Examination Officer, Coordinator of Undergraduate Research Projects, Agricultural Field Coordinator, Teaching Practice Committee Member and Faculty SIWES Coordinator/Consultant. He has also contributed to programme development, postgraduate research, academic quality assurance and student mentorship.
+
+Beyond academia, Professor Archibong has demonstrated a sustained commitment to community service, youth empowerment and social development. His contributions have earned him several recognitions from community, educational, youth and faith-based organisations for excellence, leadership, hard work and service.
+
+As part of the organisation's professional and community network, he brings valuable expertise in agricultural development, education, research, capacity building and community engagement. His experience and passion support initiatives aimed at strengthening livelihoods, empowering young people, promoting sustainable agriculture and building resilient communities.
+
+Professional Focus: Agricultural Education • Sustainable Agriculture • Youth Empowerment • Community Development • Research & Capacity Building • Food Security • Environmental Sustainability • Skills Development`,
+    slug: 'associate-professor-job-inibehe-archibong',
   },
   {
     name: 'Tpl. Godwin Effiong Edet, RTP',
@@ -83,7 +120,7 @@ Commitment: Committed to promoting orderly, resilient, and people-centred coasta
   },
   {
     name: 'Mr. David Adekunle Adetona',
-    role: 'Head of Compliance',
+    role: 'Unit Head, Compliance & Ethics',
     bio: 'David Adekunle Adetona is an energetic self-starter with extensive experience in Customer Relations, Marketing, and Compliance. He excels in providing exceptional service to clients, especially skilled with handling challenging customers. Currently serving as Manager at Rechin Foundation for Women and Youth Empowerment (2024-Present), where he leads program initiatives, collaborates with stakeholders, and manages daily operational tasks including budgeting and project planning. Previously served as Deputy State Director at Celebrants Humanitarian and Empowerment Initiative (2022-2023), Personal Assistant to Managing Director at ASKDAMZ Limited (2020-2022), Head of Relationship Management at Outright Retirement & Financial Solutions (2016-2020), and Manager of Customer Experience at ARM Pension Managers (2007-2016). Holds an HND in Mass Communication from The Polytechnic, Ife (2012), Virtual Assistant in Digital Age certification from ALX Africa (2024), Diploma in Social Media and Online Reputation Management from SHAW Academy (2015), Diploma in Online Marketing from SHAW Academy (2014), Diploma in Customer Service from Customer Service Training Institute (2013), and Customer Service Certified (CSC) from Rockhurst University (2013). Co-Founder of Davyonse Resources (2019-Present), mentoring youths in career-building programs. Fluent in English and Yoruba, conversational in Pidgin. Contact: davisadetona@gmail.com | +2348035417870 | 2, Zone 3, Asanmajana, Moniya, Ibadan, Oyo State.',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QwTeFKYWzq9rBeFEOQ8maZm3MQ7eVr.png',
     slug: 'mr-david-adekunle-adetona',
@@ -158,7 +195,7 @@ His core strengths include analytical and problem-solving skills, communication,
   },
   {
     name: 'Dr. Olayemi Joshua',
-    role: 'Head of Procurement/Logistics',
+    role: 'Unit Head, Procurement & Supply Chain Management',
     bio: 'Manages procurement processes and logistics operations to ensure efficient delivery of programs and services. Brings expertise in supply chain management and operational excellence.',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FFLFMvqrNK2lrmcuVsSlS0TFimiWMc.png',
     slug: 'dr-olayemi-joshua',
@@ -265,6 +302,9 @@ export function getTeamMemberBySlug(slug: string): TeamMember | undefined {
   }
   if (slug === 'victor-idem' || slug === 'mr-victor-emmanuel-idem' || slug === 'victor-emmanuel') {
     return allMembers.find((m) => m.slug === 'victor-emmanuel-idem')
+  }
+  if (slug === 'job-inibehe-archibong' || slug === 'prof-job-inibehe-archibong' || slug === 'inibehe-archibong') {
+    return allMembers.find((m) => m.slug === 'associate-professor-job-inibehe-archibong')
   }
   return undefined
 }

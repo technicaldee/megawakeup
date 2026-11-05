@@ -93,11 +93,11 @@ export default function ContactPage() {
                           <MapPin className="h-6 w-6 text-primary" />
                         </div>
                         <div>
-                          <h3 className="font-semibold mb-2">Office Address</h3>
+                          <h3 className="font-semibold mb-2">Operational Office Address</h3>
                           <p className="text-sm text-muted-foreground leading-relaxed">
-                            Suite A11 Maigari Plaza<br />
-                            Life Camp, Opp. Kado Fish Market<br />
-                            Abuja, Nigeria
+                            #15B, IBB Avenue<br />
+                            Opposite Idongesit Nkanga State Secretariat<br />
+                            Uyo, Akwa Ibom State, Nigeria
                           </p>
                         </div>
                       </div>

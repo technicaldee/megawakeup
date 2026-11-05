@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { leadership, teamMembers, boardOfTrustees, truncateText, getAllTeamMembers } from '@/lib/team-data'
+import { leadership, teamMembers, boardOfTrustees, truncateText, getAllTeamMembers, getUnitHeadOrganogramRank } from '@/lib/team-data'
 import { ORGANOGRAM_DATA } from '@/lib/organogram-data'
 import {
   Shield,
@@ -33,7 +33,9 @@ export default function TeamPage() {
     'chief-henry-akpan-obot',
   ]
   const directors = teamMembers.filter((m) => directorSlugs.includes(m.slug))
-  const unitHeads = teamMembers.filter((m) => !directorSlugs.includes(m.slug) && m.name && m.name.trim())
+  const unitHeads = teamMembers
+    .filter((m) => !directorSlugs.includes(m.slug) && m.name && m.name.trim())
+    .sort((a, b) => getUnitHeadOrganogramRank(a.slug) - getUnitHeadOrganogramRank(b.slug))
   const allMembers = getAllTeamMembers()
 
   // Helper to match trustee with photo if available

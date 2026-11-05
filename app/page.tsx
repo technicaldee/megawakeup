@@ -43,8 +43,10 @@ export default function HomePage() {
     foundingDate: '2020',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '#15B, IBB Avenue, Opposite Idongesit Nkanga State Secretariat',
+      addressLocality: 'Uyo',
+      addressRegion: 'Akwa Ibom State',
       addressCountry: 'NG',
-      addressLocality: 'Nigeria',
     },
     contactPoint: {
       '@type': 'ContactPoint',
@@ -311,7 +313,7 @@ export default function HomePage() {
                 },
                 {
                   name: 'Prof. Sunday O. Awofisayo',
-                  role: 'Director, Programs & Humanitarian',
+                  role: 'Director, Programs & Humanitarian Services',
                   image: '/images/sunday.png',
                 },
                 {

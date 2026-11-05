@@ -46,7 +46,7 @@ export function SiteFooter() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 shrink-0 mt-0.5" />
-                <span>Suite A11 Maigari Plaza, Life Camp, Opp. Kado Fish Market, Abuja</span>
+                <span>#15B, IBB Avenue, Opposite Idongesit Nkanga State Secretariat, Uyo, Akwa Ibom State, Nigeria</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 shrink-0" />

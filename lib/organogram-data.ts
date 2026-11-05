@@ -49,10 +49,10 @@ export const ORGANOGRAM_DATA = {
     {
       id: 'programs-humanitarian',
       name: 'Programs & Humanitarian Services Directorate',
-      shortName: 'Programs & Humanitarian',
+      shortName: 'Programs & Humanitarian Services',
       lead: {
         name: 'Prof. Sunday O. Awofisayo',
-        role: 'Director, Programs & Humanitarian',
+        role: 'Director, Programs & Humanitarian Services',
         slug: 'prof-sunday-o-awofisayo',
         image: '/images/sunday.png',
       },

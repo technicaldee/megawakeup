@@ -119,7 +119,7 @@ export default function DonatePage() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">In-Person Donation</h3>
                     <p className="text-sm">
-                      Visit our office at Suite A11 Maigari Plaza, Life Camp, Opp. Kado Fish Market, Abuja during office hours (Monday - Friday: 9:00 AM - 5:00 PM).
+                      Visit our operational office at #15B, IBB Avenue, Opposite Idongesit Nkanga State Secretariat, Uyo, Akwa Ibom State, Nigeria during office hours (Monday - Friday: 9:00 AM - 5:00 PM).
                     </p>
                   </div>
                   <div>
